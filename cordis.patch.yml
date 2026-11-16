@@ -1,0 +1,4 @@
+- insert:
+    - id: last-response-stats
+      name: 'dsh-last-response-stats'
+      config: {}

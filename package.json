@@ -1,0 +1,54 @@
+{
+  "name": "dsh-last-response-stats",
+  "version": "1.1.0",
+  "type": "module",
+  "description": "Shows average output tok/s and prompt-cache hit for the most recent Chat response.",
+  "author": "Borivoje Latinovic",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "tokens-per-second",
+    "prompt-cache"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/latinovicb/dsh-last-response-stats.git"
+  },
+  "homepage": "https://github.com/latinovicb/dsh-last-response-stats#readme",
+  "bugs": {
+    "url": "https://github.com/latinovicb/dsh-last-response-stats/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-chat"
+      ]
+    }
+  }
+}

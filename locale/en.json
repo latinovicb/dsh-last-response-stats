@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Last Response Stats",
+    "description": "Adds average output tok/s and prompt-cache hit under the most recent Chat response."
+  }
+}
